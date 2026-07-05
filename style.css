@@ -1,11 +1,199 @@
-body {font-family: Verdana, Arial;
-    font-size: large;
-    margin-left: 5em;
-    margin-right: 12.5%}
+/* --- Color Variables for Light & Dark Mode --- */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --heading-color: #222222;
+    --border-color: #eaeaea;
+    --link-color: #0056b3;
+    --link-hover: #000000;
+    --footer-text: #666666;
+}
 
-p.narrow {margin-left: 5%;
-    width: 70%}
+body.dark-mode {
+    --bg-color: #1a1a1a; 
+    --text-color: #d1d1d1;
+    --heading-color: #ffffff;
+    --border-color: #333333;
+    --link-color: #58a6ff; 
+    --link-hover: #79c0ff;
+    --footer-text: #999999;
+}
 
-ul.narrow {width: 70%}
+/* --- Base Layout & Centered Column --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 300; 
+    line-height: 1.6;
+    font-size: 1.1rem;
+    
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 20px; 
+    
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
 
+a {
+    color: var(--link-color);
+}
 
+/* --- Clean Minimalist Academic Menu --- */
+.nav-menu {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 15px; 
+    padding: 30px 0 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 300; 
+    font-size: 1.05em;
+}
+.nav-menu a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+.nav-menu a.nav-name {
+    font-size: 1.3em;
+    font-weight: 500; 
+    color: var(--heading-color);
+}
+.nav-menu a[href="./research.html"] {
+    margin-left: auto; 
+}
+.nav-menu a.no-op {
+    pointer-events: none; 
+    cursor: default;
+    color: var(--heading-color);
+    text-decoration: none;
+}
+
+/* Dark Mode Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 0;
+    color: var(--text-color);
+}
+
+/* --- Profile Picture Text Wrapping (Right Aligned) --- */
+.profile-pic {
+    float: right; 
+    width: 100%;
+    max-width: 260px; 
+    height: auto;
+    margin: 5px 0 20px 30px; 
+    border-radius: 6px; 
+}
+
+/* --- Typography --- */
+h3 {
+    font-size: 1.5em; 
+    font-weight: 500;
+    color: var(--heading-color);
+    margin-top: 15px; 
+    margin-bottom: 5px; 
+}
+h4 {
+    font-size: 1.2em; 
+    font-weight: 500;
+    color: var(--heading-color);
+    margin-top: 15px; 
+    margin-bottom: 5px; 
+}
+strong {
+    font-weight: 500;
+    color: var(--heading-color);
+}
+
+hr {
+    clear: both; 
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 30px 0;
+}
+
+/* --- Scrollable News Section (Homepage) --- */
+.news-container {
+    max-height: 300px; 
+    overflow-y: auto;
+    margin: 0 0 20px 0; 
+}
+.news-row {
+    display: flex;
+    padding: 8px 0;
+}
+.news-date {
+    flex: 0 0 100px; 
+    font-weight: 300; 
+    color: var(--text-color);
+}
+.news-desc {
+    flex: 1; 
+}
+
+/* --- Two-Column List (For Talks & CV) --- */
+.talk-row {
+    display: flex;
+    padding: 8px 0;
+    margin-bottom: 4px;
+}
+.talk-year {
+    flex: 0 0 75px; 
+    font-weight: 300;
+    color: var(--text-color);
+}
+.talk-desc {
+    flex: 1;
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    font-size: 0.85em; 
+    color: var(--footer-text);
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .profile-pic {
+        float: none; 
+        display: block;
+        margin: 0 auto 20px auto; 
+    }
+    .nav-menu {
+        justify-content: center;
+    }
+    .nav-menu a.nav-name {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .nav-menu a[href="./research.html"] {
+        margin-left: 0; 
+    }
+    .news-row, .talk-row {
+        flex-direction: column;
+    }
+    .news-date {
+        flex: none;
+        margin-bottom: 0;
+    }
+    .talk-year {
+        flex: none;
+        font-weight: 500;
+        color: var(--heading-color);
+        margin-bottom: 2px;
+    }
+}
