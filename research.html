@@ -9,60 +9,55 @@
 <body>
 
 <div class="nav-menu">
-    <a href="./index.html" class="nav-name">Anil N. Hirani</a>
-    <a href="./research.html">Research</a>
-    <a href="./publications.html">Publications</a>
-    <a href="./talks.html">Talks</a>
-    <a href="./teaching.html">Teaching</a>
-    <a href="./group.html">Group</a>
-    <a href="./industry.html">Industry</a>
-    <a href="./software.html">Software</a>
-    <button id="theme-toggle" class="theme-toggle" title="Toggle Dark Mode">🌙</button>
+  <a href="#" class="nav-name no-op">Anil N. Hirani</a>
+  <a href="./research.html">Research</a>
+  <a href="./publications.html">Publications</a>
+  <a href="./talks.html">Talks</a>
+  <a href="./teaching.html">Teaching</a>
+  <a href="./group.html">Group</a>
+  <a href="./industry.html">Industry</a>
+  <a href="./software.html">Software</a>
+  <a href="./contact.html">Contact</a>
+  <button id="theme-toggle" class="theme-toggle" title="Toggle Dark Mode">☾</button>
 </div>
 
 <h3>Research Overview</h3>
-<p>My research exists at the intersection of geometry, topology, and computation. I view computation not merely as a tool for approximation, but as a rigorous mathematical topic. My guiding philosophy has been the use of intrinsic, coordinate-free geometric approaches. I focus on exterior calculus and a coordinate-free view of differential geometry to create structure-preserving discretizations of their smooth counterparts. By translating these into finite-dimensional combinatorial equivalents on simplicial complexes, we build computational methods that preserve topological and geometric invariants and algebraic relations. The instances where the discrete and smooth structures diverge have also become interesting areas of study in their own right. Our geometric perspective provides a powerful, unified framework for solving complex problems across mathematical physics, engineering, and modern artificial intelligence.</p>
+<p>My research exists at the intersection of geometry, topology, and computation. I view computation not merely as a tool for approximation, but as a rigorous mathematical topic. My guiding philosophy has been the use of intrinsic, coordinate-free geometric approaches. I focus on exterior calculus and a coordinate-free view of differential geometry to create structure-preserving discretizations of their smooth counterparts. By translating these into finite-dimensional combinatorial equivalents on simplicial complexes, we build computational methods that aim to preserve topological and geometric invariants and algebraic relations. The instances where the discrete and smooth structures diverge have also become interesting areas of study in their own right. Our geometric perspective provides a powerful, unified framework for solving complex problems across mathematical physics, engineering, and modern artificial intelligence.</p>
 
 <h3>Foundations: Discrete Exterior Calculus & Differential Geometry</h3>
-<p><strong>DEC origins:</strong> The core foundation of my work is Discrete Exterior Calculus (DEC), a field I originated in my Ph.D. thesis at Caltech. Elementary algebraic topology, supplemented by geometry is used in formulating DEC. Smooth manifolds are replaced by abstract or geometric simplicial complexes. Cochains (taking values on vertices, edges, triangles, tetrahedra etc.) play the role of discrete differential forms and coboundary operator is the discrete exterior derivative. The discrete wedge product is anti-symmetrized cup product. The metric enters via a diagonal discrete Hodge star defined using circumcentric Poincaré dual cell complex. Contraction is defined via a flow out formula or a formula related to L2 duality of wedge and contraction and Lie derivative using Cartan homotopy formula. All this is part of my 2003 dissertation.</p>
+<p><strong>DEC origins:</strong> The core foundation of my work is Discrete Exterior Calculus (DEC), a field I originated in my Ph.D. thesis at Caltech (2003). Elementary algebraic topology, supplemented by geometry is used in formulating DEC. Smooth manifolds are replaced by abstract or geometric simplicial complexes. Cochains (taking values on vertices, edges, triangles, tetrahedra etc.) play the role of discrete differential forms and coboundary operator is the discrete exterior derivative. The discrete wedge product is anti-symmetrized cup product. The metric enters via a diagonal discrete Hodge star defined using circumcentric Poincaré dual cell complex. Contraction is defined via a flow out formula or a formula related to L2 duality of wedge and contraction and Lie derivative using Cartan homotopy formula. All this was part of my dissertation.</p>
 
-<p><strong>Triangulations:</strong> Our first step after this was the invention of well-centered triangulations, in which circumcenters are in simplex interiors, useful for a simple formulation of a positive definite discrete Hodge star. Later we relaxed this geometric requirement, defining a diagonal Hodge star for Delaunay triangulations.</p>
+<p><strong>Triangulations:</strong> Our first step after this was the invention of well-centered triangulations (2008,2010), in which circumcenters are in simplex interiors, useful for a simple formulation of a positive definite discrete Hodge star. This led to our discovery of the first dihedral acute triangulation of a cube (2010). Later we relaxed the well-centeredness requirement, defining a diagonal Hodge star for Delaunay triangulations.</p>
 
-<p><strong>Vector bundle valued DEC:</strong> Starting from around 2015-16 we have developed a discrete exterior calculus for vector bundles with connections, as a foundation for discrete differential geometry. This work is ongoing and part of it has appeared in dissertation of my former student Mark Schubel (2017) and later on arXiv (2021, 2026).</p>
+<p><strong>Vector bundle valued DEC:</strong> Starting from around 2015-16 we have developed a discrete exterior calculus for vector bundles with connections, as a foundation for discrete differential geometry. This work is ongoing and part of it has appeared in dissertation of my former student Mark Schubel (2017) and later on in arXiv (2021, 2026).</p>
 
-<p><strong>Recent DEC:</strong> In addition to vector bundle valued DEC, some highlights of our recent DEC work includes: discovery of an averaging interpretation of discrete wedge (2024);  realization of the naturality of DEC operators under abstract simplicial maps (2024); proof of convergence and stability for Hodge-Laplace problems in dimension two (2025);  construction of discrete Poincaré operators to compute potentials (2025); and a method for constructing A-infinity structures on simplicial complexes (2025). Our discovery of A-infinity structures in DEC is an example of the surprising manner in which inevitable gaps between smooth and discrete structures (in this case a fundamental obstruction to discrete wedge associativity) leads to new discoveries. This appears in the dissertation of my former student Bingyan Liu (2026).</p>
+<p><strong>Recent DEC:</strong> In addition to vector bundle valued DEC, some highlights of our recent DEC work include: discovery of an averaging interpretation of discrete wedge (2024);  realization of the naturality of DEC operators under abstract simplicial maps (2024); proof of convergence and stability for Hodge-Laplace problems in dimension two (2025);  construction of discrete Poincaré operators to compute potentials (2025); and a method for constructing A-infinity structures on simplicial complexes (2025). Our discovery of A-infinity structures in DEC is an example of the surprising manner in which inevitable gaps between smooth and discrete structures (in this case a fundamental obstruction to discrete wedge associativity) leads to new discoveries. This appears in the dissertation of my former student Bingyan Liu (2026).</p>
 
 <p><strong>FEEC:</strong> I also work in Finite element exterior calculus (FEEC) which is another discretization of exterior calculus widely used in numerical analysis. Our older work in this is on a posteriori error estimation for adaptive FEEC (2014). In recent work, we have related the DEC and lowest order FEEC norms (2025) and DEC and FEEC wedge products (2024). Other ongoing FEEC projects are in geometric scientific machine learning (see below).</p>
 
-<p><strong>BGG and double forms:</strong> A current active area in numerical analysis is construction of differential complexes from de Rham complexes, inspired by the Bernstein-Gelfand-Gelfand (BGG) technique from geometry. The basic objects are double forms, defined by de Rham, and widely used in coordinate-free differential geometry since the 60s and 70s, for example in the works of Calabi, Kulkarni and others. These have entered numerical analysis via BGG-isnpired constructions in the works of Arnold, Čap, Christiansen, Hu and others. I am involved in a few projects related to BGG and double forms. One is a BGG construction for cochains in DEC leading to a definition of discrete symmetric tensors in DEC in the dissertation of my former student Chengbin Zhu (2026). Another ongoing project is in theoretical foundations of double forms with a view towards discretizations.</p>
+<p><strong>BGG and double forms:</strong> A very active area in numerical analysis is based on construction of higher order differential complexes from de Rham complexes. This is inspired by the Bernstein-Gelfand-Gelfand (BGG) technique from geometry. The basic objects are double forms, originally defined by de Rham, and widely used in coordinate-free differential geometry since the 60s and 70s, for example in the works of Calabi, Kulkarni and others. These have entered numerical analysis via BGG-isnpired constructions in the works of Arnold, Čap, Christiansen, Hu and others. I am involved in a few projects related to BGG and double forms. One is a BGG construction for DEC leading to a definition of discrete symmetric tensors in DEC. This appears in the recent dissertation of my former student Chengbin Zhu (2026). Another ongoing project is in theoretical foundations of double forms with a view towards discretizations.</p>
       
 <h3>Applications: Physics, Topology, & Numerical Analysis</h3>
-<p>We apply these structure-preserving methods to the numerical solution of partial differential equations in computational physics and engineering.
-
-
-  By utilizing DEC and finite element exterior calculus, we analyze well-centered meshing and design conservative integrators for piecewise smooth dynamics. In computational physics, this allows for highly accurate, invariant-preserving simulations of the Navier-Stokes equations for fluids on simplicial surfaces, two-phase flows, compressible flows, elasticity, and flow in porous media. Additionally, in computational topology, we apply these tools to compute harmonic forms on hyperbolic 3-manifolds and embedded surfaces using harmonic series expansions and finite element exterior calculus.</p>
+<p>We apply these structure-preserving methods to the numerical solution of partial differential equations in computational physics and engineering. The discrete wedge product and Lie derivative were instrumental in our work on Navier-Stokes' equations on two dimensional simplicial surfaces (2016), later generalized to two phase flow (2023). In topology we have used FEEC for computing discrete harmonic forms in a given cohomology class (2022) and spectral techniques for computing L2-norms of harmonic forms on hyperbolic 3-manifolds. The latter is ongoing work with Nathan Dunfield.</p>
 
 <h3>Emerging Frontiers: Geometric Scientific Machine Learning</h3>
-<p>As researchers in AI increasingly recognize the necessity of structure preservation, we have begun applying our geometric frameworks to machine learning. Our current work involves high-dimensional embeddings of scalar values in tabular data machine learning. Supported by a recent NSF grant starting in June 2026, my group is explicitly combining machine learning with structure-preserving discretizations for PDEs to build robust, geometrically accurate AI models for the physical sciences.</p>
+<p>As researchers in AI increasingly recognize the necessity of structure preservation, we have begun applying our geometric frameworks to machine learning in scientific computing. Our current work involves high-dimensional embeddings of scalar values in tabular data machine learning. Supported by a recent NSF grant starting in June 2026 with Nat Trask, we are combining machine learning with structure-preserving discretizations for PDEs with tensorial contraints that arise in many physical applications.</p>
 
-<h3>Previous Applications & Historical Work</h3>
-<p>Because coordinate-free geometry is a universal language, I have previously applied these principles to a diverse range of disciplines. My academic background is rooted in Computer Science, with an early focus on logic and automated theorem proving at Stanford University, which later evolved into research on the structure of satisfiable and unsatisfiable propositional logic sentences using graph theory. Early in my career, I applied a geometric perspective to Computer Graphics as a software engineer at Sun Microsystems. Furthermore, I have worked in astrodynamics, utilizing structure-preserving numerical methods as part of the trajectory design team for the Jupiter Icy Moons Orbiter at the NASA Jet Propulsion Laboratory.</p>
+<h3>Computer Science and Other Research</h3>
+<p><strong>Older research:</strong> My academic background is rooted in Computer Science, with an early focus on logic and automated theorem proving at Stanford University, and software verification at Sun Microsystems, where I later worked in computer graphics verification. At Sony Corporation and early in my graduate work at Caltech I did research on image processing: noise removal (1996) and template matching (2001). Before developing DEC my research at Caltech was in variational integrators for ordinary differential equations (2000), and computer graphics using structure-preserving ideas (2003). At NASA's Jet Propulsion Lab and after leaving JPL I worked on geometric approaches for trajectory design for the Jupiter Icy Moons Orbiter in the context of the circular restricted three-body problem (2003-2004, 2005, 2006) shifting my attention to fast computations of asteroid gravitational field (2007, 2008, 2009). A homological version of the harmonic form  </p>
 
-<h3>Previous Funded Projects</h3>
+<p><strong>Recent research:</strong> A few years ago I dabbled in logic again, this time with a geometric perspective. This led to our results on the structure of satisfiable and unsatisfiable propositional logic sentences using graphs (2020) and hypergraphs (2021). I started exploring machine learning a few years ago and our first results were in improving neural network performance for tabular data (2025).</p>
+
+<h3>Previous Externally Funded Projects</h3>
 <ul>
   <li>NSF CAREER Award: Algebraic Topology and Exterior Calculus in Numerical Analysis, National Science Foundation</li>
   <li>Optimality in Homology - Algorithms and Applications, National Science Foundation</li>
   <li>Identifying Subgroups of Tinnitus using Novel Resting State fMRI Biomarkers and Cluster Analysis, US Department of Defense</li>
   <li>Novel Structure-Preserving Algorithms for Accurate Rocket Trajectory Propagation, Missile Defense Agency</li>
-  <li>Exterior Calculus Discretizations of Drop and Bubble Dynamics, KAUST</li>
+  <li>Exterior Calculus Discretizations of Drop and Bubble Dynamics, KAUST Competitive Research Grant</li>
   <li>Structure Preserving Methods for Multiphysics, DARPA Defense Sciences Office</li>
   <li>Physics informed neural network for resonant cavity, XEROX PARC</li>
   <li>Symmetric Tensors in Discrete Exterior Calculus and Linearized Elasticity in the Plane, National Science Foundation</li>
-  <li>Research Funding, Fitila.ai</li>
-  <li>Computational Science and Engineering program, Campus and UI system funding</li>
-  <li>Search for Minimal Obstructions to Boolean Satisfiability, Campus Research Board</li>
-  <li>Discovery Partners Institute, Campus and UI system funding</li>
-  <li>Trainable Embeddings of Numerical Features for Tabular Data Neural Networks, Campus Research Board</li>
 </ul>
 
 <hr>
