@@ -35,10 +35,4 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-
-    // 3. Automatically update the last modified date
-    const lastModifiedSpan = document.getElementById('last-modified');
-    if (lastModifiedSpan) {
-        lastModifiedSpan.textContent = document.lastModified;
-    }
 });
