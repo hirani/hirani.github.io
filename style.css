@@ -48,6 +48,12 @@ a {
     padding: 30px 0 20px 0;
     margin-bottom: 30px;
     border-bottom: 1px solid var(--border-color);
+    
+    /* Sticky Navigation */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--bg-color);
 }
 .nav-menu a {
     text-decoration: none;
