@@ -91,6 +91,7 @@ a {
     text-decoration: none;
     color: var(--text-color);
     padding: 0 6px;
+    white-space: nowrap; /* Prevents the text from splitting across lines */
 }
 .jump-menu a:hover {
     color: var(--link-hover);
@@ -194,6 +195,11 @@ hr {
         display: block;
         margin: 0 auto 20px auto; 
     }
+    
+    h3 {
+        scroll-margin-top: 180px; 
+    }
+    
     .nav-menu {
         justify-content: center;
     }
