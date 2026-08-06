@@ -21,10 +21,19 @@
   <button id="theme-toggle" class="theme-toggle" title="Toggle Dark Mode">☾</button>
 </div>
 
-<h3>Research Overview</h3>
+<div class="jump-menu">
+  <a href="#overview">Overview</a> &middot; 
+  <a href="#foundations">Foundations</a> &middot; 
+  <a href="#applications">Applications</a> &middot; 
+  <a href="#frontiers">Emerging Frontiers</a> &middot; 
+  <a href="#cs">CS &amp; Other Research</a> &middot; 
+  <a href="#funded">Funded Projects</a>
+</div>
+
+<h3 id="overview">Research Overview</h3>
 <p>My research exists at the intersection of geometry, topology, and computation and the guiding philosophy of my research has been the use of intrinsic, coordinate-free geometric approaches. I focus on exterior calculus and a coordinate-free view of differential geometry to create their structure-preserving discretizations. We translate the objects and operators of these into finite-dimensional combinatorial equivalents on simplicial complexes. This allows us to build computational methods that aim to preserve topological and geometric invariants and algebraic relations that hold in the smooth setting. The instances where the discrete and smooth structures diverge have also become interesting areas of study in their own right. Our geometric perspective provides a powerful, unified framework for solving complex problems across mathematical physics, engineering, and modern artificial intelligence.</p>
 
-<h3>Foundations: Discrete Exterior Calculus (DEC) & Differential Geometry</h3>
+<h3 id="foundations">Foundations: Discrete Exterior Calculus (DEC) & Differential Geometry</h3>
 <p><strong>DEC origins:</strong> The core foundation of my work is <a href="https://resolver.caltech.edu/CaltechETD:etd-05202003-095403">Discrete Exterior Calculus</a> which is the title of my 2003 Caltech Ph.D. dissertation. Elementary algebraic topology, supplemented by geometry is used in formulating DEC. Smooth manifolds are replaced by abstract or geometric simplicial complexes. Cochains, taking values on vertices, edges, triangles, tetrahedra etc., play the role of discrete differential forms and coboundary operator is the discrete exterior derivative. The discrete wedge product is anti-symmetrized cup product. The metric enters via a diagonal discrete Hodge star defined using circumcentric Poincaré dual cell complex. Contraction is defined via a flow out formula or a formula related to <em>L</em><sup>2</sup> duality of wedge and contraction and Lie derivative using Cartan homotopy formula. All this was part of my dissertation.</p>
 
 <p><strong>Triangulations:</strong> Our first focus after this was the invention and development of well-centered triangulations (WCT). In WCT circumcenters are in simplex interiors, which is useful for a simple formulation of a positive definite discrete Hodge star. This led to our discovery of the first dihedral acute triangulation of a cube. Later we relaxed the well-centeredness requirement, defining a diagonal Hodge star for Delaunay triangulations.</p>
@@ -37,13 +46,13 @@
 
 <p><strong>BGG and double forms:</strong> A very active area in numerical analysis is based on construction of higher order differential complexes from de Rham complexes. This is inspired by the Bernstein-Gelfand-Gelfand (BGG) technique from geometry. The basic objects are double forms, originally defined by de Rham, and widely used in coordinate-free differential geometry since the 60s and 70s, for example in the works of Calabi, Kulkarni and others. These entered numerical analysis via BGG-inspired constructions in the works of Arnold, Čap, Christiansen, Hu and others. I am involved in a few projects related to BGG and double forms. One is a BGG construction for DEC leading to a definition of discrete symmetric tensors in DEC. This appears in the recent dissertation of my former student Chengbin Zhu. Another ongoing project is in theoretical foundations of structure and calculus of double forms with a view towards discretizations.</p>
       
-<h3>Applications: Physics, Topology, & Numerical Analysis</h3>
+<h3 id="applications">Applications: Physics, Topology, & Numerical Analysis</h3>
 <p>We apply these structure-preserving methods to the numerical solution of partial differential equations in computational physics and engineering. Our earliest work in fluids was on Darcy flow. The discrete wedge product and Lie derivative were instrumental in our work on Navier-Stokes' equations on two dimensional simplicial surfaces, later generalized to two phase flow. In topology we have used FEEC for computing discrete harmonic forms in a given cohomology class and spectral techniques for computing <em>L</em><sup>2</sup>-norms of harmonic forms on hyperbolic 3-manifolds. The latter is ongoing work with Nathan Dunfield. Research on DEC methods for elasticity is ongoing.</p>
 
-<h3>Emerging Frontiers: Geometric Scientific Machine Learning</h3>
+<h3 id="frontiers">Emerging Frontiers: Geometric Scientific Machine Learning</h3>
 <p>As researchers in AI increasingly recognize the necessity of structure preservation, we have begun applying our geometric frameworks to machine learning in scientific computing. Supported by a recent NSF grant with Nat Trask starting in June 2026 we are combining machine learning with structure-preserving discretizations for PDEs with tensorial constraints. Such constraints arise in many physical applications and in differential geometry.</p>
 
-<h3>Computer Science and Other Research</h3>
+<h3 id="cs">Computer Science and Other Research</h3>
 <p><strong>Older research:</strong> My academic background is rooted in Computer Science, with an early focus on logic and automated theorem proving at Stanford University, and software verification at Sun Microsystems, where I later worked in computer graphics verification and development. At Sony Corporation and early in my graduate work at Caltech I did research on image processing: noise removal and template matching. The latter has led to techniques for brain scan matching. My other research at Caltech was in variational integrators for ordinary differential equations and applications of structure-preserving techniques in computer graphics. Some examples are: discrete shells and vector field processing.</p>
 
 <p>At NASA's Jet Propulsion Lab and soon after moving to Illinois I worked on geometric approaches for trajectory design for the Jupiter Icy Moons Orbiter in the context of the circular restricted three-body problem later shifting my attention to fast computations of asteroid gravitational field.</p>
@@ -52,7 +61,7 @@
 
 <p><strong>Recent research:</strong> A few years ago I dabbled in logic again, this time with a geometric perspective. This led to our results on the structure of satisfiable and unsatisfiable propositional logic sentences using graphs and hypergraphs. This was the dissertation research of my former student Vaibhav Karve. My introduction to machine learning research a few years ago was a standalone project on improvement of neural network performance for tabular data.</p>
 
-<h3>Externally Funded Projects</h3>
+<h3 id="funded">Externally Funded Projects</h3>
 <ul>
   <li>Geometric Scientific Machine Learning for PDEs with Tensorial Constraints, National Science Foundation (2026-2029).</li>
   <li>Symmetric Tensors in Discrete Exterior Calculus and Linearized Elasticity in the Plane, National Science Foundation.</li>
