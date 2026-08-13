@@ -225,7 +225,7 @@ hr {
     }
     .news-list dt, .talks-list dt {
         padding-bottom: 0;
-        font-weight: 500;
+        font-weight: 400;
         color: var(--heading-color);
     }
     .news-list dd, .talks-list dd {
