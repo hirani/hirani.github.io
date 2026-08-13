@@ -66,8 +66,8 @@ a {
     text-decoration: underline;
 }
 .nav-menu a.nav-name {
-    font-size: 1.3em;
-    font-weight: 500; 
+    font-size: 1.5em;
+    font-weight: 600; 
     color: var(--heading-color);
 }
 .nav-menu a[href="./research.html"] {
@@ -120,17 +120,16 @@ a {
 }
 
 /* --- Typography --- */
-/* --- Typography --- */
 h3 {
-    font-size: 1.1em; /* Reduced from 1.5em to establish visual hierarchy */
-    font-weight: 500;
+    font-size: 1.25em; 
+    font-weight: 600;
     color: var(--heading-color);
-    margin-top: 15px; 
-    margin-bottom: 5px; 
+    margin-top: 25px; 
+    margin-bottom: 10px; 
     scroll-margin-top: 100px; /* Prevents sticky nav from covering headings */
 }
 
-#foundations {
+#foundations, #ddg, #feec {
     scroll-margin-top: 20vh; 
 }
 
@@ -202,7 +201,7 @@ hr {
         margin: 0 auto 20px auto; 
     }
     
-    h3 {
+    h3, #foundations, #ddg, #feec {
         scroll-margin-top: 180px; 
     }
     
