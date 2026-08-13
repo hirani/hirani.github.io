@@ -120,8 +120,9 @@ a {
 }
 
 /* --- Typography --- */
+/* --- Typography --- */
 h3 {
-    font-size: 1.5em; 
+    font-size: 1.1em; /* Reduced from 1.5em to establish visual hierarchy */
     font-weight: 500;
     color: var(--heading-color);
     margin-top: 15px; 
