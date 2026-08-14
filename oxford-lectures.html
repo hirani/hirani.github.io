@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxford DEC Lectures - Anil N. Hirani</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">    
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="./theme.js"></script>
+</head>
+<body>
+
+<div class="nav-menu">
+  <a href="./index.html" class="nav-name">Anil N. Hirani</a>
+  <a href="./research.html">Research</a>
+  <a href="./publications.html">Publications</a>
+  <a href="./talks.html">Talks</a>
+  <a href="./teaching.html">Teaching</a>
+  <a href="./group.html">Group</a>
+  <a href="./industry.html">Industry</a>
+  <a href="./software.html">Software</a>
+  <a href="./contact.html">Contact</a>
+  <button id="theme-toggle" class="theme-toggle" title="Toggle Dark Mode">☾</button>
+</div>
+
+<div class="jump-menu">
+  <a href="#lecture1">Lecture 1</a> &middot; 
+  <a href="#lecture2">Lecture 2</a> &middot; 
+  <a href="#lecture3">Lecture 3</a> &middot; 
+  <a href="#lecture4">Lecture 4</a> &middot; 
+  <a href="#lecture5">Lecture 5</a>
+</div>
+
+<h2 style="font-size: 1.5em; font-weight: 600; color: var(--heading-color); margin-top: 10px; margin-bottom: 15px;">Oxford Lectures on Discrete Exterior Calculus (DEC)</h2>
+
+<p>The following series of 5 lectures is planned for late summer. These are planned to be delivered at the <a href="https://www.maths.ox.ac.uk/" target="_blank">Mathematical Institute, Oxford University</a>, hosted by <a href="https://kaibohu.github.io/geofem/" target="_blank">GeoFEM</a> and <a href="https://kaibohu.github.io/" target="_blank">Kaibo Hu</a>.</p>
+
+<p>Discrete Exterior Calculus (DEC) is a combinatorial construction of objects and operators that mimics the structure of exterior calculus on smooth manifolds, but constructed on a simplicial complex without requiring a differentiable structure. DEC serves dual roles: as a framework for solving numerical PDEs, which establishes links with finite element exterior calculus (FEEC), and as a mathematical structure in its own right, establishing links with geometry and topology. The extension of DEC to vector bundle valued discrete forms serves as a foundation of discrete differential geometry (DDG). These whiteboard lectures will emphasize the use of concrete examples to convey the core ideas. The series is divided into five 90-minute lectures.</p>
+
+<h3 id="lecture1">LECTURE 1 (Discrete forms, exterior derivative, wedge product, and naturality):</h3>
+<p>This opening lecture establishes the combinatorial foundations of the framework. We will introduce simplicial complexes, chains, and cochains. Cochains will play the role of discrete differential forms obtained from smooth forms using the de Rham map. The coboundary operator will serve the role of the discrete exterior derivative. To make things more concrete, we will write the discrete derivative of a form as a matrix-vector product in examples. A discrete wedge product will be constructed by anti-symmetrization of a cup-like product inspired by the Alexander-Čech-Whitney cup product of algebraic topology.</p>
+
+<p>The discrete exterior derivative and wedge product are natural with respect to simplicial maps, that is, they commute with pullbacks. This makes simplicial maps play the role that differentiable maps play in the smooth setting, providing a category-theoretic perspective to DEC. We will use small examples to illustrate naturality, graded commutativity, and the Leibniz (product) rule.</p>
+
+<h3 id="lecture2">LECTURE 2 (Wedge product, associativity, and A-infinity algebras):</h3>
+<p>We will start by recalling some uses of the wedge product to represent nonlinear terms in partial differential equations. We will then interpret the purely algebraic definition of the discrete wedge from the previous lecture as a geometric averaging operation, which may offer a path to generalize discrete wedge products to general cell complexes. The rest of the lecture revolves around a structure that is not preserved in discretization: the DEC wedge is not associative, a fact we will illustrate by example.</p>
+
+<p>The simplicial cup product of algebraic topology is associative but not graded commutative, and this leads to the commuting cochain problem. The DEC wedge product, conversely, is graded commutative but not associative, which leads in this setting to A-infinity algebras. A-infinity algebras were invented in topology and are now used in other areas of mathematics and physics. After an elementary introduction to A-infinity algebras, we will see a recent simplicial A-infinity construction for contractible complexes. This construction assumes the availability of a DEC operator for computing potentials (a Poincaré operator), which we will outline in a later lecture if time permits.</p>
+
+<h3 id="lecture3">LECTURE 3 (Vector bundle valued DEC):</h3>
+<p>The discrete forms studied in the first two lectures evaluate to a scalar value on input chains. This is enough to develop discretizations of PDEs involving scalar fields, and forms masquerading classically as vector fields. To handle general tensor fields, the first step is moving to forms that take values in a vector bundle. The scalar valued case is a special case of real line bundles.</p>
+
+<p>Some continuum mechanics quantities will be used to motivate why vector bundle valued forms are needed for some PDEs. To settle on the terminology, we will quickly see a high-level overview of vector bundles, exterior covariant derivatives, endomorphism bundles, curvature, and the different types of products.</p>
+
+<p>The rest of this lecture extends some of the DEC framework to discrete vector bundles. Additional structure of local ordering is now needed for simplicial complexes, and consequently, the simplicial maps need to preserve that order. We will introduce the subdivision operator as a functor and a tool to construct these. Discrete vector bundles will be defined as a vector space at each vertex, and a discrete connection as transport maps on edges, which allows for the comparison of vectors at different vertices. Discrete vector valued forms will be defined, and the discrete exterior covariant derivative will act as a coboundary operator that incorporates parallel transport. Discrete curvature will be defined by squaring this derivative, which yields a difference in transports along alternative paths. We will see that the resulting discrete curvature satisfies a discrete differential Bianchi identity.</p>
+
+<p>The story of discrete products gets interesting again, and we will see that now antisymmetrization results in a curvature obstruction for the product rule. As a result, we will define the various products needed without using anti-symmetrization and see via examples that naturality and Leibniz continue to hold. We will conclude with a discussion of other contemporary theories and see how two of these are generated by a coarsening and alternation operator applied to our framework. Time permitting, we will briefly touch upon flat connections and twisted de Rham cohomology.</p>
+
+<h3 id="lecture4">LECTURE 4 (Discrete Hodge star, codifferential, contraction and Lie derivative):</h3>
+<p>This lecture introduces a metric to the DEC framework, utilizing a Poincaré dual type mesh based on circumcenters rather than barycenters. For this purpose, well-centered triangulations, where circumcenters lie strictly within the simplex interior, are the most straightforward to work with, but they can be challenging to generate. To address this, we will demonstrate how to relax the well-centeredness requirement to the Delaunay condition, a property satisfied by most standard mesh generators. After defining a combinatorial technique to orient the dual complex, we will construct a discrete Hodge star operator, realized as a diagonal mass matrix using the measures of simplices and cells in the primal simplicial complex and the dual cell complex. Combined with the discrete exterior derivative, this will allow us to define a discrete codifferential.</p>
+
+<p>Next, we will state two identities regarding the contraction (hook) operator that naturally lead to definitions for the discrete contraction operator. One of these definitions involves the Hodge star and wedge product and implies the <em>L</em><sup>2</sup> duality of the wedge product and contraction; we will briefly examine this duality and its applications to double forms and PDEs. Finally, we will define the discrete Lie derivative by adopting the Cartan homotopy formula. Time permitting, we will also see a recent construction of a DEC Poincaré operator.</p>
+
+<h3 id="lecture5">LECTURE 5 (Hodge-Laplace problems, relationship with FEEC):</h3>
+<p>The final lecture brings together most of the framework for scalar valued DEC developed in previous lectures to pose and solve the Hodge-Laplace source and eigenvalue problems. We will see the parallels between the lowest order mixed FEEC formulation and the DEC mixed formulation of the source problem. The diagonal discrete Hodge star additionally permits a direct formulation of the problems in DEC. The DEC mixed formulation for the source problem was recently shown to be convergent and stable. One technique used for this was establishing equivalence of DEC and FEEC norms. We will see a high-level view of these convergence and stability results. If there is time, we will also see ongoing work on the role of boundary DEC complexes for imposing boundary conditions.</p>
+
+<hr>
+
+<div class="footer">
+  <p>&copy; 2026 Anil N. Hirani</p>
+</div>
+
+</body>
+</html>
