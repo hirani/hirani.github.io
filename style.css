@@ -97,6 +97,12 @@ a {
     color: var(--link-hover);
     text-decoration: underline;
 }
+.jump-menu .jump-group {
+    padding: 0 6px;
+}
+.jump-menu .jump-group a {
+    padding: 0;
+}
 
 
 /* Dark Mode Toggle Button */
