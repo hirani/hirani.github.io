@@ -9,6 +9,7 @@
     --footer-text: #666666;
     --badge-border: #cccccc;
     --badge-text: #666666;
+    --bib-bg: #f7f7f7;
 }
 
 body.dark-mode {
@@ -21,6 +22,7 @@ body.dark-mode {
     --footer-text: #999999;
     --badge-border: #484848;
     --badge-text: #a0a0a0;
+    --bib-bg: #232323;
 }
 
 /* --- Base Layout & Centered Column --- */
@@ -286,4 +288,48 @@ hr {
 .pub-links a.free:hover {
     background-color: var(--link-color);
     color: var(--bg-color);
+}
+
+/* Per-entry BibTeX, collapsed by default. The summary matches the link labels. */
+details.bibtex {
+    display: inline;
+}
+details.bibtex > summary {
+    display: inline-block;
+    vertical-align: 1px;
+    font-size: 0.72em;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    padding: 1px 7px;
+    margin: 2px 4px 2px 0;
+    border-radius: 3px;
+    border: 1px solid var(--badge-border);
+    color: var(--badge-text);
+    cursor: pointer;
+    list-style: none;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+details.bibtex > summary::-webkit-details-marker { display: none; }
+details.bibtex > summary::marker { content: ""; }
+details.bibtex > summary:hover,
+details.bibtex[open] > summary {
+    border-color: var(--link-color);
+    color: var(--link-color);
+}
+details.bibtex > pre {
+    display: block;
+    margin: 8px 0 4px 0;
+    padding: 10px 12px;
+    background-color: var(--bib-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 0.78em;
+    line-height: 1.45;
+}
+details.bibtex > pre > code {
+    white-space: pre;
 }
