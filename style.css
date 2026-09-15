@@ -258,6 +258,11 @@ hr {
     line-height: 1.7;
 }
 
+/* Links and the BibTeX toggle share one row of their own, below the citation. */
+.pub-actions {
+    margin-top: 3px;
+}
+
 /* Link labels: DOI / arXiv / PDF. Outlined = may be paywalled, solid = free. */
 .pub-links {
     display: inline;
