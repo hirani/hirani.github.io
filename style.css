@@ -262,7 +262,8 @@ hr {
 .pub-links {
     display: inline;
 }
-.pub-links a {
+.pub-links a,
+.pub-links .sample {
     display: inline-block;
     font-size: 0.72em;
     font-weight: 500;
@@ -281,9 +282,16 @@ hr {
     border-color: var(--link-color);
     color: var(--link-color);
 }
-.pub-links a.free {
+.pub-links a.free,
+.pub-links .sample.free {
     border-color: var(--link-color);
     color: var(--link-color);
+}
+/* Swatches in the intro paragraph illustrate the labels; they do not navigate. */
+.pub-links .sample {
+    cursor: default;
+    -webkit-user-select: none;
+    user-select: none;
 }
 .pub-links a.free:hover {
     background-color: var(--link-color);
