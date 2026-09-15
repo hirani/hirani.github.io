@@ -7,6 +7,8 @@
     --link-color: #0056b3;
     --link-hover: #000000;
     --footer-text: #666666;
+    --badge-border: #cccccc;
+    --badge-text: #666666;
 }
 
 body.dark-mode {
@@ -17,6 +19,8 @@ body.dark-mode {
     --link-color: #58a6ff; 
     --link-hover: #79c0ff;
     --footer-text: #999999;
+    --badge-border: #484848;
+    --badge-text: #a0a0a0;
 }
 
 /* --- Base Layout & Centered Column --- */
@@ -237,4 +241,49 @@ hr {
         padding-top: 0;
         margin-bottom: 8px;
     }
+}
+/* --- Publications list --- */
+.pub-list {
+    padding-left: 22px;
+}
+.pub-list > li {
+    margin-bottom: 16px;
+}
+.pub-note {
+    font-size: 0.9em;
+    color: var(--footer-text);
+    margin: 0 0 28px 0;
+    line-height: 1.7;
+}
+
+/* Link labels: DOI / arXiv / PDF. Outlined = may be paywalled, solid = free. */
+.pub-links {
+    display: inline;
+}
+.pub-links a {
+    display: inline-block;
+    font-size: 0.72em;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 1px 7px;
+    margin: 2px 4px 2px 0;
+    border-radius: 3px;
+    border: 1px solid var(--badge-border);
+    color: var(--badge-text);
+    vertical-align: 1px;
+    transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+}
+.pub-links a:hover {
+    border-color: var(--link-color);
+    color: var(--link-color);
+}
+.pub-links a.free {
+    border-color: var(--link-color);
+    color: var(--link-color);
+}
+.pub-links a.free:hover {
+    background-color: var(--link-color);
+    color: var(--bg-color);
 }

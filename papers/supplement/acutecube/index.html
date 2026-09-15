@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<title> Supplemental Data and Programs for Dihedral Acute
+  Triangulation of the Cube </title>
+<link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+
+<body>
+<center>
+<h2 align=center> Supplemental Data and Programs for<br> Dihedral Acute
+  Triangulation of the Cube </h2>
+</center>
+<hr>
+
+There is a dihedral acute triangulation of the cube, and because there
+is one, there are, in fact, infinitely many combinatorially different
+acute triangulations of the cube.  In 2009, E.&nbsp;VanderZee,
+A.&nbsp;Hirani, V.&nbsp;Zharnitsky, and D.&nbsp;Guoy discovered an
+acute triangulation of the cube with 1370 tetrahedra (Details are in
+the preprint <a href="http://arxiv.org/abs/0905.3715">here</a>).  The
+vertices of that acute triangulation are available <a
+ href="./acutevtxcoord.txt">here</a>.  The triangulation is the
+Delaunay triangulation of the set of vertices.<p>
+
+MATLAB has a function that computes the 3-dimensional
+Delaunay triangulation of a set of points, so it's
+possible to write a fairly short MATLAB script that
+computes the triangulation from the set of vertices
+and verifies that the triangulation is, indeed, dihedral
+acute.  We provide such a script
+<a href="./acuteverify.m">here</a>.  The script
+is not robust in terms of error checking, but given a
+file with a list of points in 3-dimensional Euclidean space, it
+reads the points from the file, computes their Delaunay
+triangulation, and computes the dihedral angles and
+face angles of the tetrahedra of the Delaunay
+triangulation. 
+
+<br>
+<br>
+
+<p><strong>To cite this webpage, the vertex data, or the program linked from
+this page, please use <a href="../../../bibtex/VaHiZhGu2009a_supplement_bib.html">
+this</a></strong>.</p>
+
+<br>
+
+<hr>
+
+Page maintained by <a
+ href="http://www.cse.uiuc.edu/~vanderze">Evan VanderZee</a> and <a
+ href="http://www.cs.uiuc.edu/hirani">Anil N. Hirani</a>. Last updated
+May 29, 2009.
+
+</body>
+</html>
