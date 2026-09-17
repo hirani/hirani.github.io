@@ -243,6 +243,11 @@ hr {
         padding-top: 0;
         margin-bottom: 8px;
     }
+    /* Repeated years are blanked. The desktop grid still needs the empty cell
+       to keep its rows aligned, but stacked on one column it is just a gap. */
+    .talks-list dt:empty {
+        display: none;
+    }
 }
 /* --- Publications list --- */
 .pub-list {
@@ -263,12 +268,40 @@ hr {
     margin-top: 3px;
 }
 
-/* Link labels: DOI / arXiv / PDF. Outlined = may be paywalled, solid = free. */
-.pub-links {
+/* Lecture series: year, title, badge. The extra column takes only the width
+   its badge needs, so the title keeps the rest. */
+.talks-list.with-badges {
+    grid-template-columns: 75px 1fr auto;
+}
+
+/* Recent talks: title and badge only, no year column. */
+.talk-badge-list {
+    list-style: none;
+    margin: 0 0 40px 0;
+    padding: 0;
+}
+.talk-badge-list li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    column-gap: 20px;
+    padding: 8px 0;
+}
+
+/* Badges align on the right edge, so drop the trailing margin they carry. */
+.talk-badge-list .talk-links a,
+.talks-list .talk-actions .talk-links a {
+    margin-right: 0;
+}
+
+/* Link labels: DOI / arXiv / PDF on publications, Slides / Poster / Lectures on talks.
+   Outlined = may be paywalled, solid = free. */
+.pub-links, .talk-links {
     display: inline;
 }
 .pub-links a,
-.pub-links .sample {
+.pub-links .sample,
+.talk-links a {
     display: inline-block;
     font-size: 0.72em;
     font-weight: 500;
@@ -283,12 +316,14 @@ hr {
     vertical-align: 1px;
     transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
 }
-.pub-links a:hover {
+.pub-links a:hover,
+.talk-links a:hover {
     border-color: var(--link-color);
     color: var(--link-color);
 }
 .pub-links a.free,
-.pub-links .sample.free {
+.pub-links .sample.free,
+.talk-links a.free {
     border-color: var(--link-color);
     color: var(--link-color);
 }
@@ -298,7 +333,8 @@ hr {
     -webkit-user-select: none;
     user-select: none;
 }
-.pub-links a.free:hover {
+.pub-links a.free:hover,
+.talk-links a.free:hover {
     background-color: var(--link-color);
     color: var(--bg-color);
 }
@@ -345,4 +381,19 @@ details.bibtex > pre {
 }
 details.bibtex > pre > code {
     white-space: pre;
+}
+
+/* Narrow screens. This block trails the file so it overrides the badge layout
+   above; an earlier @media would lose the cascade to it at equal specificity. */
+@media (max-width: 768px) {
+    /* Year on its own line, then title and badge share the row. */
+    .talks-list.with-badges {
+        grid-template-columns: 1fr auto;
+    }
+    .talks-list.with-badges dt {
+        grid-column: 1 / -1;
+    }
+    .talk-badge-list li {
+        column-gap: 12px;
+    }
 }
